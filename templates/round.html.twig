@@ -1,0 +1,26 @@
+{% extends 'home.html.twig' %}
+
+{% block body %}
+
+<table>
+    <h1>Ergebnis der {{ roundId }}ten Runde:</h1>
+    <tr>
+        <th>Modell</th>
+        <th>Distanz</th>
+        <th>Dauer</th>
+        <th>Teilnehmer</th>
+        <th>Datum</th>
+    </tr>
+    {% for round in rounds %}
+    <tr>
+        <td>{{ round.paperPlaneModel }}</td>
+        <td>{{ round.travelledDistance }}</td>
+        <td>{{ round.flightDuration }}</td>
+        <td>{{ round.particpantName }}</td>
+        <td>{{ round.date }}</td>
+    <tr>
+    {% endfor %}
+</table>
+<br><br><br><br>
+<a href="{{ path('rounds') }}">Zurück zu allen Runden</a>
+{% endblock %}
