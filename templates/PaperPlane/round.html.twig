@@ -1,4 +1,4 @@
-{% extends 'home.html.twig' %}
+{% extends 'PaperPlane/home.html.twig' %}
 
 {% block body %}
 
@@ -11,6 +11,7 @@
         <th>Teilnehmer</th>
         <th>Datum</th>
     </tr>
+
     {% for round in rounds %}
     <tr>
         <td>{{ round.paperPlaneModel }}</td>
