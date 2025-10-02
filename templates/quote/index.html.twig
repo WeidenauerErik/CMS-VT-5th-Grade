@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<title>Quote index</title>
+
+{% block body %}
+    <h1>Quote index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Msg</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for quote in quotes %}
+            <tr>
+                <td>{{ quote.id }}</td>
+                <td>{{ quote.name }}</td>
+                <td>{{ quote.msg }}</td>
+                <td>
+                    <a href="{{ path('app_quote_show', {'id': quote.id}) }}">show</a>
+                    <a href="{{ path('app_quote_edit', {'id': quote.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_quote_new') }}">Create new</a>
+{% endblock %}
