@@ -1,0 +1,27 @@
+<h1>Create New Entry</h1>
+
+<form method="post">
+    <label>Name:</label><br>
+    <input type="text" name="name" value="{{ entry.name }}"><br><br>
+
+    <label>Birthday:</label><br>
+    <input type="date" name="birthday" value="{{ entry.birthday }}"><br><br>
+
+    <label>Score:</label><br>
+    <input type="text" name="score" value="{{ entry.score }}"><br><br>
+
+    <label>Custom Field (each letter twice):</label><br>
+    <input type="text" name="customField" value="{{ entry.customField }}"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+{% if errors|length > 0 %}
+    <div style="color:red; margin-top:20px;">
+        <ul>
+            {% for error in errors %}
+                <li>{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
