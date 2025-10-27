@@ -29,4 +29,16 @@ class SecurityController extends AbstractController
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
+
+    #[Route(path: '/Profile', name: 'user_page')]
+    public function userPage(): Response
+    {
+        return new Response("<h1>User Page</h1>");
+    }
+
+    #[Route(path: '/Dashboard', name: 'admin_page')]
+    public function adminPage(): Response
+    {
+        return new Response("<h1>Admin Page</h1>");
+    }
 }
