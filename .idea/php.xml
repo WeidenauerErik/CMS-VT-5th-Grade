@@ -88,6 +88,11 @@
       <path value="$PROJECT_DIR$/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/shim" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/executor" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/gnupg" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/composer-distributor" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.4" />

@@ -80,6 +80,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/clock" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-http" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/composer-distributor" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/executor" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/gnupg" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/shim" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

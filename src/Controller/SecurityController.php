@@ -33,8 +33,18 @@ class SecurityController extends AbstractController
     #[Route(path: '/Profile', name: 'user_page')]
     public function userPage(): Response
     {
-        return new Response("<h1>User Page</h1>");
+        $user = $this->getUser();
+
+        if (!$user) {
+            return new Response("<h1>Access denied – not logged in!</h1>");
+        }
+
+        // Hole die E-Mail
+        $email = $user->getEmail();
+
+        return new Response("<h1>User Page</h1><p>Welcome, $email!</p>");
     }
+
 
     #[Route(path: '/Dashboard', name: 'admin_page')]
     public function adminPage(): Response

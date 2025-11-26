@@ -12,6 +12,13 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class EntryController extends AbstractController
 {
+    /**
+     * this shows and manage the create page
+     *
+     * @param Request $request
+     * @param ValidatorInterface $validator
+     * @return Response
+     */
     #[Route('/entry/new', name: 'entry_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ValidatorInterface $validator): Response
     {
